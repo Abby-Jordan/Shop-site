@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Shree Mahakali Dairy and Sweets"
+version = "1.0.0"
+id = "artifacts/mahakali-dairy"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24497
+
+[services.development]
+run = "pnpm --filter @workspace/mahakali-dairy run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mahakali-dairy", "run", "build" ]
+publicDir = "artifacts/mahakali-dairy/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24497"
+BASE_PATH = "/"
