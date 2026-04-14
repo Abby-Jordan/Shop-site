@@ -6,7 +6,7 @@ const products = [
   {
     name: "Fresh Full Cream Milk",
     category: "Dairy",
-    emoji: "🥛",
+    img: "/products/milk.png",
     desc: "Pure, rich, and creamy full cream milk sourced fresh daily from healthy cows.",
     badge: "Best Seller",
     badgeColor: "bg-blue-600",
@@ -14,15 +14,15 @@ const products = [
   {
     name: "Desi Cow Ghee",
     category: "Dairy",
-    emoji: "🧈",
-    desc: "Premium quality ghee made using traditional bilona method from desi cow milk.",
+    img: "/products/ghee.png",
+    desc: "Premium quality ghee made using the traditional bilona method from desi cow milk.",
     badge: "Premium",
     badgeColor: "bg-amber-500",
   },
   {
     name: "Fresh Paneer",
     category: "Paneer & Chhena",
-    emoji: "🍱",
+    img: "/products/paneer.png",
     desc: "Soft, fresh, homemade-style paneer made from pure cow milk. Available daily.",
     badge: "Fresh Daily",
     badgeColor: "bg-green-600",
@@ -30,23 +30,23 @@ const products = [
   {
     name: "Mishti Doi",
     category: "Sweets",
-    emoji: "🍮",
-    desc: "Traditional sweet curd, slow-cooked with jaggery. A Bengali delicacy loved by all.",
+    img: "/products/mishti-doi.png",
+    desc: "Traditional sweet curd, slow-cooked with jaggery. A classic delicacy loved by all.",
     badge: "Traditional",
     badgeColor: "bg-rose-500",
   },
   {
     name: "Rasgulla",
     category: "Sweets",
-    emoji: "🍡",
-    desc: "Soft, spongy chhena balls soaked in light sugar syrup. Melt in your mouth!",
+    img: "/products/rasgulla.png",
+    desc: "Soft, spongy chhena balls soaked in light sugar syrup. Melt-in-your-mouth perfection!",
     badge: "Popular",
     badgeColor: "bg-purple-600",
   },
   {
     name: "Dahi (Curd)",
     category: "Dairy",
-    emoji: "🥣",
+    img: "/products/dahi.png",
     desc: "Thick, creamy, naturally set curd made from pure milk. Perfect for daily use.",
     badge: "Daily Essential",
     badgeColor: "bg-teal-600",
@@ -54,7 +54,7 @@ const products = [
   {
     name: "Gulab Jamun",
     category: "Sweets",
-    emoji: "🟤",
+    img: "/products/gulab-jamun.png",
     desc: "Golden-fried milk solid dumplings soaked in rose-flavored sugar syrup.",
     badge: "Festival Special",
     badgeColor: "bg-orange-500",
@@ -62,7 +62,7 @@ const products = [
   {
     name: "Fresh Butter",
     category: "Dairy",
-    emoji: "🧈",
+    img: "/products/butter.png",
     desc: "White homemade butter churned fresh every morning. No salt, no preservatives.",
     badge: "Natural",
     badgeColor: "bg-yellow-500",
@@ -70,31 +70,33 @@ const products = [
   {
     name: "Chhena Poda",
     category: "Paneer & Chhena",
-    emoji: "🍰",
-    desc: "Baked chhena with caramelized sugar — an Odisha delicacy with a smoky aroma.",
+    img: "/products/chhena-poda.png",
+    desc: "Baked chhena with caramelized sugar — an authentic delicacy with a smoky aroma.",
     badge: "Specialty",
     badgeColor: "bg-amber-700",
+    fallbackEmoji: "🍰",
   },
   {
     name: "Kheer",
     category: "Sweets",
-    emoji: "🍚",
+    img: "/products/kheer.png",
     desc: "Creamy rice pudding simmered in full cream milk with saffron and cardamom.",
     badge: "Home Style",
     badgeColor: "bg-pink-500",
   },
   {
-    name: "Chaas / Buttermilk",
+    name: "Masala Chaas",
     category: "Dairy",
-    emoji: "🧋",
-    desc: "Refreshing spiced buttermilk — the perfect summer cooler with cumin and mint.",
+    img: "/products/chaas.png",
+    desc: "Refreshing spiced buttermilk with cumin and mint — the perfect summer cooler.",
     badge: "Seasonal",
     badgeColor: "bg-cyan-600",
+    fallbackEmoji: "🧋",
   },
   {
     name: "Kalakand",
     category: "Special",
-    emoji: "🍬",
+    img: "/products/kalakand.png",
     desc: "Rich, grainy milk cake with the goodness of pure milk and minimal sugar.",
     badge: "Special",
     badgeColor: "bg-indigo-600",
@@ -109,35 +111,36 @@ export default function Products() {
     : products.filter((p) => p.category === activeCategory);
 
   const whatsappOrder = (productName: string) => {
-    const message = encodeURIComponent(`Hello! I'd like to order: *${productName}* from Shree Mahakali Dairy and Sweets. Please let me know the availability and pricing.`);
-    window.open(`https://wa.me/919876543210?text=${message}`, "_blank");
+    const msg = encodeURIComponent(
+      `Hello! I'd like to order: *${productName}* from Shree Mahakali Dairy and Sweets. Please let me know the availability and pricing.`
+    );
+    window.open(`https://wa.me/919876543210?text=${msg}`, "_blank");
   };
 
   return (
-    <section id="products" className="py-20 bg-white">
+    <section id="products" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+        <div className="text-center mb-14">
+          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide mb-5">
             Our Products
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Fresh &amp; Pure Products
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            From farm-fresh milk to handcrafted sweets — everything is made with love and purity.
+          <p className="text-gray-500 max-w-xl mx-auto text-base">
+            From farm-fresh milk to handcrafted sweets — everything made with love and purity.
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-10">
+        <div className="flex flex-wrap justify-center gap-2.5 mb-10">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                 activeCategory === cat
-                  ? "bg-blue-700 text-white shadow-md"
-                  : "bg-gray-100 text-gray-600 hover:bg-blue-50 hover:text-blue-700"
+                  ? "bg-blue-700 text-white shadow-md shadow-blue-200"
+                  : "bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-700 border border-gray-200"
               }`}
             >
               {cat}
@@ -145,26 +148,42 @@ export default function Products() {
           ))}
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {filtered.map((product) => (
             <div
               key={product.name}
-              className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group"
+              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group border border-gray-100"
             >
-              <div className="relative bg-gradient-to-br from-blue-50 to-amber-50 p-8 flex items-center justify-center">
-                <span className="text-6xl">{product.emoji}</span>
+              <div className="relative overflow-hidden bg-gray-50 h-52">
+                <img
+                  src={product.img}
+                  alt={product.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    target.style.display = "none";
+                    const parent = target.parentElement;
+                    if (parent) {
+                      const fallback = parent.querySelector('.fallback-emoji') as HTMLElement;
+                      if (fallback) fallback.style.display = "flex";
+                    }
+                  }}
+                />
+                <div
+                  className="fallback-emoji hidden absolute inset-0 items-center justify-center text-7xl bg-gradient-to-br from-blue-50 to-amber-50"
+                >
+                  {product.fallbackEmoji || "🍶"}
+                </div>
                 <span
-                  className={`absolute top-3 right-3 text-white text-xs font-semibold px-2.5 py-1 rounded-full ${product.badgeColor}`}
+                  className={`absolute top-3 left-3 text-white text-xs font-semibold px-2.5 py-1 rounded-full ${product.badgeColor} shadow-sm`}
                 >
                   {product.badge}
                 </span>
               </div>
               <div className="p-5">
-                <span className="text-xs text-blue-600 font-medium bg-blue-50 px-2 py-0.5 rounded-full">
-                  {product.category}
-                </span>
-                <h3 className="font-bold text-gray-900 mt-2 mb-2">{product.name}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-4">{product.desc}</p>
+                <span className="text-xs text-blue-600 font-medium">{product.category}</span>
+                <h3 className="font-bold text-gray-900 mt-1 mb-2 text-base">{product.name}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-2">{product.desc}</p>
                 <button
                   onClick={() => whatsappOrder(product.name)}
                   className="w-full bg-green-500 hover:bg-green-600 text-white text-sm font-semibold py-2.5 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2"

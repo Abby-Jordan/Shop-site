@@ -1,76 +1,69 @@
-import logoImg from "@assets/logo_1776168530282.jpeg";
-
 export default function AboutUs() {
   return (
-    <section id="about" className="py-20 bg-amber-50">
+    <section id="about" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-5">
-              <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
-              About Us
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="relative">
+            <div className="absolute -top-8 -left-8 w-64 h-64 bg-blue-50 rounded-3xl -z-10" />
+            <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-amber-50 rounded-3xl -z-10" />
+
+            <div className="relative bg-gradient-to-br from-blue-900 to-blue-700 rounded-3xl overflow-hidden p-10 shadow-xl">
+              <img
+                src="/logo.png"
+                alt="Shree Mahakali Dairy"
+                className="w-full max-w-xs mx-auto block drop-shadow-2xl"
+              />
+              <div className="mt-8 grid grid-cols-3 gap-4 text-center border-t border-white/20 pt-6">
+                {[
+                  { val: "25+", label: "Years" },
+                  { val: "2", label: "Branches" },
+                  { val: "100%", label: "Pure" },
+                ].map((s) => (
+                  <div key={s.label}>
+                    <p className="text-2xl font-bold text-amber-400">{s.val}</p>
+                    <p className="text-blue-200 text-xs mt-0.5">{s.label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-5">
-              Pure Dairy Tradition Since Decades
+          </div>
+
+          <div>
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide mb-6">
+              Our Story
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight mb-6">
+              Pure Dairy Tradition<br />
+              <span className="text-blue-700">Since Decades</span>
             </h2>
-            <p className="text-gray-600 text-base leading-relaxed mb-5">
+            <p className="text-gray-500 text-base leading-relaxed mb-5">
               Shree Mahakali Dairy and Sweets has been serving the community with the finest
-              quality dairy products and traditional sweets. Founded with a mission to deliver
-              pure, fresh, and wholesome products directly to your doorstep.
+              quality dairy products and traditional sweets — founded with a mission to deliver
+              pure, fresh, and wholesome products directly to your family.
             </p>
-            <p className="text-gray-600 text-base leading-relaxed mb-8">
-              Every drop of milk we serve is carefully sourced from healthy, well-cared-for cows.
-              Our sweets are crafted with authentic recipes passed down through generations,
-              using only the purest ingredients — no artificial flavors, no shortcuts.
+            <p className="text-gray-500 text-base leading-relaxed mb-10">
+              Every product we serve is carefully crafted using authentic recipes and the purest
+              ingredients. No artificial flavors, no shortcuts — just the real thing, every time.
             </p>
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: "🥛", title: "Pure Milk", desc: "Fresh from farm every day" },
-                { icon: "🧈", title: "Pure Ghee", desc: "Made with traditional method" },
-                { icon: "🍯", title: "Natural Products", desc: "No artificial additives" },
-                { icon: "🎁", title: "Festive Sweets", desc: "Traditional recipes, modern taste" },
+                { icon: "🥛", title: "Farm Fresh Milk", desc: "Sourced fresh every day" },
+                { icon: "🧈", title: "Pure Desi Ghee", desc: "Traditional bilona method" },
+                { icon: "🌿", title: "100% Natural", desc: "Zero artificial additives" },
+                { icon: "🎁", title: "Festive Sweets", desc: "Handcrafted with love" },
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="bg-white rounded-xl p-4 shadow-sm border border-amber-100 hover:shadow-md transition-shadow"
+                  className="flex items-start gap-3 bg-gray-50 hover:bg-blue-50 rounded-2xl p-4 transition-colors duration-200 border border-gray-100"
                 >
-                  <div className="text-2xl mb-2">{item.icon}</div>
-                  <h4 className="font-semibold text-blue-900 text-sm">{item.title}</h4>
-                  <p className="text-gray-500 text-xs mt-1">{item.desc}</p>
+                  <span className="text-2xl">{item.icon}</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 text-sm">{item.title}</h4>
+                    <p className="text-gray-400 text-xs mt-0.5">{item.desc}</p>
+                  </div>
                 </div>
               ))}
-            </div>
-          </div>
-
-          <div className="relative flex items-center justify-center">
-            <div className="absolute w-80 h-80 sm:w-96 sm:h-96 rounded-full bg-blue-100 opacity-60" />
-            <div className="absolute w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-amber-100 opacity-60 translate-x-6 translate-y-6" />
-            <div className="relative z-10 bg-white rounded-3xl shadow-xl p-8 max-w-sm">
-              <img
-                src={logoImg}
-                alt="Shree Mahakali Dairy"
-                className="w-full h-auto object-contain rounded-2xl"
-              />
-              <div className="mt-6 text-center">
-                <h3 className="text-xl font-bold text-blue-900">Shree Mahakali Dairy</h3>
-                <p className="text-amber-600 font-medium">&amp; Sweets</p>
-                <p className="text-gray-500 text-sm mt-2">Trusted by families across the region</p>
-              </div>
-              <div className="mt-4 flex justify-center gap-6 pt-4 border-t border-gray-100">
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-blue-700">25+</p>
-                  <p className="text-xs text-gray-500">Years</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-blue-700">2</p>
-                  <p className="text-xs text-gray-500">Branches</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-2xl font-bold text-blue-700">100%</p>
-                  <p className="text-xs text-gray-500">Pure</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>

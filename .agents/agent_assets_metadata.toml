@@ -1,0 +1,62 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "bCNIsXL2QLx8FJuRaQMyc"
+uri = "file://artifacts/mahakali-dairy/public/products/milk.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "R_sbNTl-cod9Cd0Vwoymm"
+uri = "file://artifacts/mahakali-dairy/public/products/ghee.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "FTIhlLWTspHNY9jXbn-u6"
+uri = "file://artifacts/mahakali-dairy/public/products/paneer.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "9cOy_6WcBNNbOzF5YUce9"
+uri = "file://artifacts/mahakali-dairy/public/products/rasgulla.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "ABOPSt0mjQBeXIBlMETb2"
+uri = "file://artifacts/mahakali-dairy/public/products/dahi.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "6d4TT_9wOjqcKLe46r3U8"
+uri = "file://artifacts/mahakali-dairy/public/products/gulab-jamun.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "P5eN2LFRgC9KOS-RolWmC"
+uri = "file://artifacts/mahakali-dairy/public/products/butter.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "pjDSUI79BW0KW7M0tITXj"
+uri = "file://artifacts/mahakali-dairy/public/products/kalakand.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "eYSDW_v5FwuLwAUoqPr-j"
+uri = "file://artifacts/mahakali-dairy/public/products/kheer.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "YIirr2buzNblgjxw1lc_R"
+uri = "file://artifacts/mahakali-dairy/public/products/mishti-doi.png"
+type = "image"
+title = "generated_image"

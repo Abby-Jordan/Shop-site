@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import logoImg from "@assets/logo_1776168530282.jpeg";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -8,6 +7,8 @@ const navLinks = [
   { label: "Our Branches", href: "#branches" },
   { label: "Contact", href: "#contact" },
 ];
+
+const WA_LINK = "https://wa.me/919876543210?text=Hello%2C%20I%20would%20like%20to%20place%20an%20order";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,50 +23,41 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white shadow-lg py-2"
-          : "bg-white/95 backdrop-blur-sm py-3"
+        scrolled ? "bg-white/95 backdrop-blur-md shadow-md py-1.5" : "bg-white py-2"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        <a href="#home" className="flex items-center gap-3">
+        <a href="#home" className="flex items-center gap-2">
           <img
-            src={logoImg}
+            src="/logo.png"
             alt="Shree Mahakali Dairy and Sweets"
-            className="h-14 w-auto object-contain"
+            className="h-14 w-auto object-contain drop-shadow-sm"
           />
-          <div className="hidden sm:block">
-            <p className="text-xs font-semibold text-blue-600 leading-tight">Shree</p>
-            <p className="text-xl font-bold text-blue-800 leading-tight">Mahakali Dairy</p>
-            <p className="text-xs text-amber-600 font-medium leading-tight">& Sweets</p>
-          </div>
         </a>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-7">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-gray-700 hover:text-blue-700 font-medium text-sm transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-blue-700 after:transition-all hover:after:w-full"
+              className="text-gray-700 hover:text-blue-700 font-medium text-sm transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:bg-blue-700 after:transition-all hover:after:w-full"
             >
               {link.label}
             </a>
           ))}
           <a
-            href="https://wa.me/919876543210?text=Hello%2C%20I%20would%20like%20to%20place%20an%20order"
+            href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 flex items-center gap-2 shadow-md hover:shadow-lg"
+            className="bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 flex items-center gap-2 shadow hover:shadow-md"
           >
-            <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-            </svg>
-            Order on WhatsApp
+            <WAIcon />
+            Order Now
           </a>
         </nav>
 
         <button
-          className="md:hidden text-blue-800 p-2"
+          className="md:hidden text-blue-800 p-2 rounded-lg hover:bg-blue-50"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -80,27 +72,35 @@ export default function Navbar() {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-4 pb-4">
+        <div className="md:hidden bg-white border-t border-gray-100 px-4 pb-5 pt-3 space-y-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="block py-3 text-gray-700 hover:text-blue-700 font-medium border-b border-gray-50 last:border-0"
+              className="block py-2.5 px-3 rounded-lg text-gray-700 hover:text-blue-700 hover:bg-blue-50 font-medium text-sm transition-colors"
             >
               {link.label}
             </a>
           ))}
           <a
-            href="https://wa.me/919876543210?text=Hello%2C%20I%20would%20like%20to%20place%20an%20order"
+            href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-3 w-full bg-green-500 text-white px-4 py-2.5 rounded-full text-sm font-semibold flex items-center justify-center gap-2"
+            className="mt-2 w-full bg-green-500 text-white px-4 py-3 rounded-full text-sm font-semibold flex items-center justify-center gap-2"
           >
-            Order on WhatsApp
+            <WAIcon /> Order on WhatsApp
           </a>
         </div>
       )}
     </header>
+  );
+}
+
+function WAIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+    </svg>
   );
 }
