@@ -42,6 +42,6 @@ See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and pa
 
 ## Notes
 
-- WhatsApp number is currently set to placeholder `919876543210` — update in all component files
+- WhatsApp number is currently set to placeholder `917600585983` — update in all component files
 - Branch addresses are placeholder — update in `artifacts/mahakali-dairy/src/components/Branches.tsx`
 - Google Maps embeds use placeholder coordinates — update with real branch coordinates
