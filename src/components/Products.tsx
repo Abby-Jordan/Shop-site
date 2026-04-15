@@ -6,7 +6,7 @@ const products = [
   {
     name: "Fresh Full Cream Milk",
     category: "Dairy",
-    img: "/products/milk.png",
+    img: "/products/milk.webp",
     desc: "Fresh, nutritious, calcium-rich daily essential.",
     badge: "Best Seller",
     badgeColor: "bg-blue-600",
@@ -14,7 +14,7 @@ const products = [
   {
     name: "Desi Ghee",
     category: "Dairy",
-    img: "/products/ghee.png",
+    img: "/products/ghee.webp",
     desc: "Aromatic, clarified butter, rich traditional fat.",
     badge: "Premium",
     badgeColor: "bg-amber-500",
@@ -22,7 +22,7 @@ const products = [
   {
     name: "Fresh Paneer",
     category: "Dairy",
-    img: "/products/paneer.png",
+    img: "/products/paneer.webp",
     desc: "Soft, protein-rich, versatile Indian cheese.",
     badge: "Fresh Daily",
     badgeColor: "bg-green-600",
@@ -30,7 +30,7 @@ const products = [
   // {
   //   name: "Mishti Doi",
   //   category: "Sweets",
-  //   img: "/products/mishti-doi.png",
+  //   img: "/products/mishti-doi.webp",
   //   desc: "Traditional sweet curd, slow-cooked with jaggery. A classic delicacy loved by all.",
   //   badge: "Traditional",
   //   badgeColor: "bg-rose-500",
@@ -38,7 +38,7 @@ const products = [
   {
     name: "Rasgulla",
     category: "Sweets",
-    img: "/products/rasgulla.png",
+    img: "/products/rasgulla.webp",
     desc: "Spongy, syrupy, light Bengali cheese balls.",
     badge: "Popular",
     badgeColor: "bg-purple-600",
@@ -46,7 +46,7 @@ const products = [
   {
     name: "Dahi (Curd)",
     category: "Dairy",
-    img: "/products/dahi.png",
+    img: "/products/dahi.webp",
     desc: "Creamy, probiotic, cooling fermented dairy delight.",
     badge: "Daily Essential",
     badgeColor: "bg-teal-600",
@@ -54,7 +54,7 @@ const products = [
   {
     name: "Gulab Jamun",
     category: "Sweets",
-    img: "/products/gulab-jamun.png",
+    img: "/products/gulab-jamun.webp",
     desc: "Soft, syrup-soaked, deep-fried sweet dumplings.",
     badge: "Festival Special",
     badgeColor: "bg-orange-500",
@@ -62,7 +62,7 @@ const products = [
   {
     name: "Fresh Butter",
     category: "Dairy",
-    img: "/products/butter.png",
+    img: "/products/butter.webp",
     desc: "Smooth, creamy, spreadable dairy fat delight.",
     badge: "Natural",
     badgeColor: "bg-yellow-500",
@@ -70,7 +70,7 @@ const products = [
   {
     name: "Basundi",
     category: "Sweets",
-    img: "/products/basundi.jpg",
+    img: "/products/basundi.webp",
     desc: "Rich, condensed milk dessert, nutty flavor.",
     badge: "Specialty",
     badgeColor: "bg-amber-700",
@@ -79,7 +79,7 @@ const products = [
   {
     name: "Shrikhand",
     category: "Sweets",
-    img: "/products/shrikhand.jpg",
+    img: "/products/shrikhand.webp",
     desc: "Thick, sweetened yogurt, saffron flavored dessert.",
     badge: "Home Style",
     badgeColor: "bg-pink-500",
@@ -87,7 +87,7 @@ const products = [
   {
     name: "Masala Chaas",
     category: "Dairy",
-    img: "/products/chaas.png",
+    img: "/products/chaas.webp",
     desc: "Light, refreshing, spiced digestive summer drink.",
     badge: "Seasonal",
     badgeColor: "bg-cyan-600",
@@ -96,7 +96,7 @@ const products = [
   {
     name: "Kalakand",
     category: "Sweets",
-    img: "/products/kalakand.png",
+    img: "/products/kalakand.webp",
     desc: "Grainy, sweet, milk-based festive delicacy.",
     badge: "Popular",
     badgeColor: "bg-purple-600",
@@ -104,7 +104,7 @@ const products = [
   {
     name: "Barfi",
     category: "Sweets",
-    img: "/products/barfi.png",
+    img: "/products/barfi.webp",
     desc: "Dense, sweet, milk-based fudge confection.",
     badge: "Popular",
     badgeColor: "bg-purple-600",
@@ -112,7 +112,7 @@ const products = [
   {
     name: "Ladoo",
     category: "Sweets",
-    img: "/products/ladoo.png",
+    img: "/products/ladoo.webp",
     desc: "Round, sweet, festive Indian sweet ball.",
     badge: "Home Style",
     badgeColor: "bg-pink-500",
@@ -120,7 +120,7 @@ const products = [
   {
     name: "Namkeen",
     category: "Snacks",
-    img: "/products/namkeen.png",
+    img: "/products/namkeen.webp",
     desc: "Savory, crunchy, spiced Indian snack mix.",
     badge: "Special",
     badgeColor: "bg-indigo-600",
