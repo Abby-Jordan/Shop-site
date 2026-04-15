@@ -46,7 +46,7 @@ export default function WhyChooseUs() {
               Why Choose Us
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
-              The Mahakali<br />
+              Shree Mahakali<br />
               <span className="text-amber-400">Dairy Promise</span>
             </h2>
             <p className="text-blue-300 text-base leading-relaxed mb-10">

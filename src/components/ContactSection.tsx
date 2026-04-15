@@ -42,7 +42,7 @@ export default function ContactSection() {
                   </svg>
                 ),
                 title: "Phone / WhatsApp",
-                value: "+91 98765 43210",
+                value: "+91 76005 85983",
                 href: "tel:+917600585983",
               },
               {
@@ -52,8 +52,8 @@ export default function ContactSection() {
                   </svg>
                 ),
                 title: "Email",
-                value: "info@shreemahakalidairy.com",
-                href: "mailto:info@shreemahakalidairy.com",
+                value: "abhaydeora97@gmail.com",
+                href: "mailto:abhaydeora97@gmail.com",
               },
               {
                 icon: (
@@ -62,7 +62,7 @@ export default function ContactSection() {
                   </svg>
                 ),
                 title: "Working Hours",
-                value: "Monday – Sunday: 6:00 AM – 10:00 PM",
+                value: "Monday – Sunday: 6:00 AM – 11:00 PM",
                 href: null,
               },
             ].map((item) => (

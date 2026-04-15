@@ -1,4 +1,7 @@
 export default function Hero() {
+  const currentYear = new Date().getFullYear();
+  const yearsOfTrust = currentYear - 1972;
+
   return (
     <section
       id="home"
@@ -29,7 +32,7 @@ export default function Hero() {
             </h2>
             <p className="text-blue-100 text-base sm:text-lg leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0">
               Farm-fresh dairy and handcrafted traditional sweets — crafted with love,
-              served with purity since decades. Trusted by thousands of families.
+              served with purity since 1972. Trusted by thousands of families.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -54,7 +57,7 @@ export default function Hero() {
 
             <div className="mt-12 flex gap-10 justify-center lg:justify-start">
               {[
-                { value: "25+", label: "Years of Trust" },
+                { value: `${yearsOfTrust}+`, label: "Years of Trust" },
                 { value: "2", label: "Branches" },
                 { value: "100%", label: "Pure Quality" },
               ].map((stat) => (

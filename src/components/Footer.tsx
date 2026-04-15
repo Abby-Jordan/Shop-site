@@ -68,19 +68,19 @@ export default function Footer() {
             <div className="space-y-5">
               <div>
                 <p className="text-xs text-gray-600 uppercase tracking-wide mb-1">Branch 1 — Main Store</p>
-                <p className="text-gray-500 text-sm">123, Main Road, Near Temple Chowk, Your City - 000000</p>
+                <p className="text-gray-500 text-sm">Shop No. 12/13 Shailganga Shopping Center Near I.P School, Chandkheda, Ahmedabad, Gujarat 382424</p>
               </div>
               <div>
-                <p className="text-xs text-gray-600 uppercase tracking-wide mb-1">Branch 2 — City Center</p>
-                <p className="text-gray-500 text-sm">456, Market Complex, City Center, Your City - 000001</p>
+                <p className="text-xs text-gray-600 uppercase tracking-wide mb-1">Branch 2 — Second Branch</p>
+                <p className="text-gray-500 text-sm">Shop No 16, Aradhya Homes, AARADHYA HOMES, Tragad, New, Chandkheda, Ahmedabad, Gujarat 382424</p>
               </div>
               <div>
                 <p className="text-xs text-gray-600 uppercase tracking-wide mb-1">Phone / WhatsApp</p>
-                <a href="tel:+917600585983" className="text-amber-400 hover:text-amber-300 text-sm font-medium">+91 98765 43210</a>
+                <a href="tel:+917600585983" className="text-amber-400 hover:text-amber-300 text-sm font-medium">+91 76005 85983</a>
               </div>
               <div>
                 <p className="text-xs text-gray-600 uppercase tracking-wide mb-1">Hours</p>
-                <p className="text-gray-500 text-sm">Daily: 6:00 AM – 10:00 PM</p>
+                <p className="text-gray-500 text-sm">Daily: 6:00 AM – 11:00 PM</p>
               </div>
             </div>
           </div>

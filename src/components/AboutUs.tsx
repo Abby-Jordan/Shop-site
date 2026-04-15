@@ -1,4 +1,7 @@
 export default function AboutUs() {
+
+  const currentYear = new Date().getFullYear();
+  const yearsOfTrust = currentYear - 1972;
   return (
     <section id="about" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,7 +18,7 @@ export default function AboutUs() {
               />
               <div className="mt-8 grid grid-cols-3 gap-4 text-center border-t border-white/20 pt-6">
                 {[
-                  { val: "25+", label: "Years" },
+                  { val: `${yearsOfTrust}+`, label: "Years" },
                   { val: "2", label: "Branches" },
                   { val: "100%", label: "Pure" },
                 ].map((s) => (
@@ -34,7 +37,7 @@ export default function AboutUs() {
             </div>
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight mb-6">
               Pure Dairy Tradition<br />
-              <span className="text-blue-700">Since Decades</span>
+              <span className="text-blue-700">Since 1972</span>
             </h2>
             <p className="text-gray-500 text-base leading-relaxed mb-5">
               Shree Mahakali Dairy and Sweets has been serving the community with the finest

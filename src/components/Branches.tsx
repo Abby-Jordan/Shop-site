@@ -2,27 +2,27 @@ const branches = [
   {
     id: 1,
     name: "Branch 1 — Main Store",
-    address: "123, Main Road, Near Temple Chowk, Your City, State - 000000",
-    phone: "+91 98765 43210",
+    address: "Shop No. 12/13 Shailganga Shopping Center Near I.P School, Chandkheda, Ahmedabad, Gujarat 382424",
+    phone: "+91 76005 85983",
     whatsapp: "917600585983",
-    timing: "Mon–Sun: 6:00 AM – 10:00 PM",
-    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.8!2d72.8!3d21.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSurat%2C+Gujarat!5e0!3m2!1sen!2sin!4v1000000000",
-    mapLink: "https://maps.google.com",
+    timing: "Mon–Sun: 6:00 AM – 11:00 PM",
+    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.516184590383!2d72.57195099197065!3d23.10565632102337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e83acfa9ebba3%3A0x90a124890f774522!2sShree%20Mahakali%20Dairy!5e0!3m2!1sen!2sin!4v1776235181073!5m2!1sen!2sin",
+    mapLink: "https://maps.app.goo.gl/9sg3q24fA6y3fENr5",
     features: ["Fresh Milk & Dairy", "All Sweets", "Bulk Orders", "Home Delivery"],
     badge: "Main Branch",
     badgeColor: "bg-blue-700",
   },
   {
     id: 2,
-    name: "Branch 2 — City Center",
-    address: "456, Market Complex, City Center Square, Your City, State - 000001",
-    phone: "+91 98765 43211",
-    whatsapp: "919876543211",
-    timing: "Mon–Sun: 7:00 AM – 9:30 PM",
-    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.8!2d72.9!3d21.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSurat%2C+Gujarat!5e0!3m2!1sen!2sin!4v1000000001",
-    mapLink: "https://maps.google.com",
-    features: ["Premium Products", "Festival Sweets", "Gift Packing", "Take Away"],
-    badge: "City Center",
+    name: "Branch 2 — Second Branch",
+    address: "Shop No 16, Aradhya Homes, AARADHYA HOMES, Tragad, New, Chandkheda, Ahmedabad, Gujarat 382424",
+    phone: "+91 76005 85983",
+    whatsapp: "917600585983",
+    timing: "Mon–Sun: 6:00 AM – 11:00 PM",
+    mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.221490046574!2d72.56652938011847!3d23.125577999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e830073190615%3A0x1a9a2a8be24716c!2sSHREE%20MAHAKALI%20DAIRY!5e0!3m2!1sen!2sin!4v1776235735306!5m2!1sen!2sin",
+    mapLink: "https://maps.app.goo.gl/aBt1HUZ2bV4udxk87",
+    features: ["Fresh Milk & Dairy", "All Sweets", "Bulk Orders", "Home Delivery"],
+    badge: "Second Branch",
     badgeColor: "bg-amber-600",
   },
 ];
@@ -62,7 +62,7 @@ export default function Branches() {
                   title={`Map for ${branch.name}`}
                   className="w-full h-full"
                 />
-                <div className="absolute top-4 left-4">
+                <div className="absolute top-4 right-4">
                   <span className={`text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md ${branch.badgeColor}`}>
                     {branch.badge}
                   </span>
